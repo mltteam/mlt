@@ -1,0 +1,600 @@
+/*
+ * Global styles for the water hyacinth bag advertisement site.
+ * Inspired by the minimalist luxury aesthetic of high‑end fashion houses such as
+ * Versace and Balenciaga, this stylesheet employs generous whitespace,
+ * restrained color palettes and clean typography. The primary colours include
+ * a soft off‑white background (#f8f5f0) that references natural fibres, a
+ * dark charcoal (#1a1a1a) for text and accents, and a muted olive green
+ * (#556b2f) used sparingly for call‑to‑action elements. The layout is
+ * responsive, adapting gracefully across devices.
+ */
+
+/* CSS Reset and defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #1a1a1a;
+  background-color: #f8f5f0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+h2.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container helper */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: #556b2f;
+}
+
+/* Responsive menu toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('../img/bag.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #f8f5f0;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #556b2f;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6c8b34;
+}
+
+/* Features Section */
+.features-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #556b2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 5rem 0;
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text p {
+  color: #444;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #f2efe8;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #556b2f;
+}
+
+.contact-form button {
+  align-self: center;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: #ddd;
+  padding: 2rem 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #ddd;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Eco Section */
+.eco-section {
+  background: #f8f5f0;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.eco-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.eco-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.eco-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.eco-list li i {
+  color: #556b2f;
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* Testimonials Section */
+.testimonial-section {
+  background: #f2efe8;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.testimonial span {
+  font-weight: 600;
+  color: #556b2f;
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.process-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.process-card .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #556b2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.process-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.process-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Care Section */
+.care-section {
+  background: #f2efe8;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.care-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.care-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.care-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.care-list li i {
+  color: #556b2f;
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #f8f5f0;
+  padding: 5rem 0;
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.faq-toggle {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.faq-question i {
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  background: #fff;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+}
