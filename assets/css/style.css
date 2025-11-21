@@ -422,7 +422,6 @@ a {
   transform: scale(1.02);
 }
 
-/* ==================== ECO SECTION ==================== */
 .eco-section {
   min-height: 100vh;
   background-image: url('../img/image.png');
@@ -489,6 +488,80 @@ a {
 }
 
 .eco-list li i {
+  color: #b6da9a;
+  font-size: 1.25rem;
+  width: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==================== VHSF SECTION ==================== */
+.vhsf-section {
+  min-height: 100vh;
+  background-image: url('../img/vhsf_rediction.png');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.vhsf-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.vhsf-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.vhsf-panel {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: 5%;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.vhsf-panel h2 {
+  color: #1a1a1a;
+  text-align: left;
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.vhsf-panel p {
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.vhsf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vhsf-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.vhsf-list li i {
   color: #b6da9a;
   font-size: 1.25rem;
   width: 24px;
